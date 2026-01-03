@@ -2,65 +2,43 @@
 
 import { ExternalLink } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
-import cafeteriaWeb  from '../images/CafeteriaWeb.png'
-import gymnasiaWeb  from '../images/gymWeb.png'
-import aprendeceWeb  from '../images/aprendeceLandig.webp'
+import cafeteriaWeb from '../images/CafeteriaWeb.png'
+import gymnasiaWeb from '../images/gymWeb.png'
+import aprendeceWeb from '../images/aprendeceLandig.webp'
 import Image from "next/image";
 
 
 const projects = [
   {
-    title: "E-Commerce Modernos",
+    title: "Aprendece",
     description:
-      "Plataforma de comercio electrónico con gestión de inventario, pagos integrados y panel administrativo completo.",
+      "Landing page para clinica de psicólogo que atiende a nivel internacional, capacidad de contactarlo por medio de whatsapp.",
     // image: "/modern-ecommerce-dark.png",
     image: aprendeceWeb,
     category: "Desarrollo Web",
-    tags: ["Next.js", "Stripe", "PostgreSQL"],
-    linksP: ["https://fitness-gym-landing-page.vercel.app/"],
+    tags: ["React.js"],
+    linksP: ["https://aprendece.com/"],
   },
   {
-    title: "SaaS Dashboard",
+    title: "Cafeteria Volcan",
     description:
-      "Dashboard analítico para startup SaaS con visualización de datos en tiempo real y gestión de usuarios.",
+      "Landing page para cafeteria donde se muestra como las distintas comidas que brinda el lugar y ademas muestra la  ubicación de la cafeteria.",
     image: cafeteriaWeb,
-    category: "Software a Medida",
-    tags: ["React", "Node.js", "MongoDB"],
-    linksP: ["https://fitness-gym-landing-page.vercel.app/"],
+    // category: "Desarrollo Web",
+    category: "Landing Pages",
+    tags: ["Next.js"],
+    linksP: ["https://landing-page-coffe-store.vercel.app/"],
   },
   {
-    title: "Landing Inmobiliaria",
+    title: "Gimnasio Fitness",
     description:
-      "Landing page de alta conversión para agencia inmobiliaria con galería interactiva y formulario de contacto.",
+      "Landing page donde se brinda la información a los usuarios sobre los horarios, entrenadores y precios que se manejan.",
     image: gymnasiaWeb,
     category: "Landing Pages",
     tags: ["Next.js", "Tailwind", "SEO"],
-    linksP: ["https://fitness-gym-landing-page.vercel.app/"],
+    linksP: ["https://gym-landing-page-fawn-iota.vercel.app/"],
   },
-  {
-    title: "App de Gestión",
-    description: "Sistema de gestión empresarial con módulos de inventario, ventas y reportes personalizados.",
-    // image: "/business-management-app-dark.jpg",
-    category: "Software a Medida",
-    tags: ["React", "Express", "MySQL"],
-    linksP: ["https://fitness-gym-landing-page.vercel.app/"],
-  },
-  {
-    title: "Portfolio Creativo",
-    description: "Portafolio minimalista para diseñador con animaciones suaves y galería de proyectos optimizada.",
-    // image: "/creative-portfolio-website-minimal.jpg",
-    category: "Desarrollo Web",
-    tags: ["Next.js", "Framer Motion", "CMS"],
-    linksP: ["https://fitness-gym-landing-page.vercel.app/"],
-  },
-  {
-    title: "Landing Fitness",
-    description: "Landing page para gimnasio con sistema de reservas, planes de membresía y testimonios de clientes.",
-    // image: "/fitness-gym-landing-page-dark.jpg",
-    category: "Landing Pages",
-    tags: ["React", "Tailwind", "Forms"],
-    linksP: ["https://fitness-gym-landing-page.vercel.app/"],
-  },
+
 ]
 
 export function PortfolioSection() {
@@ -89,7 +67,17 @@ export function PortfolioSection() {
                   className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-6">
-                  <ExternalLink className="w-6 h-6 text-primary" />
+                  {project.linksP.map((linksP, idx) => (
+                    <a
+                      href={linksP}>
+                      <ExternalLink
+
+                        className="w-6 h-6 text-primary"
+                      />
+                    </a>
+
+                  ))}
+
                 </div>
               </div>
               <CardContent className="p-6 space-y-4">
@@ -107,14 +95,15 @@ export function PortfolioSection() {
                       {tag}
                     </span>
                   ))}
-                  <div>
+                  <div className="flex flex-wrap gap-2">
                     {project.linksP.map((linksP, idx) => (
-                      <span
+                      <a
                         key={idx}
+                        href={linksP}
                         className="px-3 py-1 text-xs rounded-full bg-primary/10 text-primary border border-primary/20"
                       >
-                        {linksP}
-                      </span>
+                        Ver Proyecto
+                      </a>
                     ))}
 
                   </div>

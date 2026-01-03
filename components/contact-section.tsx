@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent } from "@/components/ui/card"
+import { toast } from "react-toastify";
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -20,7 +21,8 @@ export function ContactSection() {
     e.preventDefault()
     // Handle form submission
     console.log("[v0] Form submitted:", formData)
-    alert("¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.")
+    // alert("¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.")
+    toast.success("Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.")
     setFormData({ name: "", email: "", message: "" })
   }
 
