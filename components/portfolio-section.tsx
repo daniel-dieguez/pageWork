@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import cafeteriaWeb from '../images/CafeteriaWeb.png'
 import gymnasiaWeb from '../images/gymWeb.png'
 import aprendeceWeb from '../images/aprendeceLandig.webp'
+import apartamentosWeb from '../images/Apartamentos.png'
 import Image from "next/image";
 
 
@@ -37,6 +38,15 @@ const projects = [
     category: "Landing Pages",
     tags: ["Next.js", "Tailwind", "SEO"],
     linksP: ["https://gym-landing-page-fawn-iota.vercel.app/"],
+  },
+  {
+    title: "Apartamentos",
+    description:
+      "Landing page donde se pueden visualizar distintos apartamentos y sus caracteristicas, junto a ello caracteristicas como la ubicacion y el precio.",
+    image: apartamentosWeb,
+    category: "Landing Pages",
+    tags: ["Next.js", "Tailwind", "SEO"],
+    linksP: ["https://landing-page-apartaments.vercel.app/"],
   },
 
 ]
