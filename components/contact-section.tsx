@@ -30,8 +30,8 @@ export function ContactSection() {
     {
       icon: Mail,
       label: "Email",
-      value: "info@antiguassolutions.com",
-      href: "mailto:info@antiguassolutions.com",
+      value: "dnaguez2001@gmail",
+      href: "mailto:dnaguez2001@gmail.com",
     },
     {
       icon: Phone,

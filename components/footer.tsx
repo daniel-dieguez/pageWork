@@ -7,7 +7,7 @@ export function Footer() {
     { icon: Github, href: "https://github.com", label: "GitHub" },
     { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
     { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-    { icon: Mail, href: "mailto:info@antiguassolutions.com", label: "Email" },
+    { icon: Mail, href: "danguez2001@gmail.com", label: "Email" },
   ]
 
   const footerLinks = {
@@ -91,9 +91,7 @@ export function Footer() {
             <p>
               © {currentYear} {"Antigua's Solutions"}. Todos los derechos reservados.
             </p>
-            <p>
-              Hecho con <span className="text-primary">❤</span> en México
-            </p>
+            
           </div>
         </div>
       </div>
